@@ -9,7 +9,7 @@ macOS 终端美化配置，通过 Claude Code Skill 一键引导完成 iTerm2 + 
 - **简洁的命令提示符** — Starship，只显示当前目录路径，无多余噪音
 - **彩色文件列表** — `ls` / `ll` 带图标、颜色分类、Git 状态标注
 - **Dracula 配色** — 护眼深色主题，代码与输出层次分明
-- **输入智能补全** — 灰色历史命令提示，按 → 键接受
+- **输入智能补全** — 灰色历史命令提示，按 → 键接受；Tab 补全大小写不敏感
 - **语法高亮** — 命令输入时实时着色，错误命令立刻变红
 - **Vim 增强** — 行号、语法高亮、缩进规则、游标行高亮
 
@@ -23,6 +23,7 @@ macOS 终端美化配置，通过 Claude Code Skill 一键引导完成 iTerm2 + 
 | Dracula | iTerm2 颜色主题 |
 | zsh-autosuggestions | 历史命令灰色补全提示 |
 | zsh-syntax-highlighting | 命令行实时语法高亮 |
+| zstyle completion | Tab 补全大小写不敏感 |
 | Vim config | 编辑器基础增强配置 |
 
 **前置要求：** macOS + iTerm2 + Homebrew

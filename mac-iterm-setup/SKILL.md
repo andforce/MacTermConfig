@@ -150,17 +150,35 @@ colorscheme desert
 
 ---
 
+## 7. 大小写不敏感 Tab 补全
+
+默认 zsh 补全区分大小写（`cd CL<Tab>` 无法补全 `Class`）。加一行 `zstyle` 即可启用大小写不敏感匹配：
+
+在 `~/.zshrc` 中添加（放在 starship init **之前**）：
+
+```zsh
+# Case-insensitive tab completion
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+```
+
+效果：`cd CL<Tab>` → 补全 `Class`，大小写任意组合均可匹配。
+
+> `m:{a-zA-Z}={A-Za-z}` 的含义：补全时将大写字母映射到小写、小写映射到大写，双向不敏感。
+
+---
+
 ## 推荐的 ~/.zshrc 结构顺序
 
 ```
 1. conda initialize（如有）
 2. 环境变量（ANDROID_HOME, JAVA_HOME, PATH 等）
 3. SDKMAN（如有）
-4. eval "$(starship init zsh)"
-5. eza aliases
-6. 其他 aliases
-7. source zsh-autosuggestions
-8. source zsh-syntax-highlighting   ← 必须最后
+4. zstyle 补全配置（如大小写不敏感）
+5. eval "$(starship init zsh)"
+6. eza aliases
+7. 其他 aliases
+8. source zsh-autosuggestions
+9. source zsh-syntax-highlighting   ← 必须最后
 ```
 
 ---
