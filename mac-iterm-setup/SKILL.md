@@ -48,6 +48,14 @@ truncation_length = 3
 [git_branch]
 disabled = true
 
+[character]
+success_symbol = ""
+error_symbol = ""
+format = "$symbol"
+
+[line_break]
+disabled = true
+
 [gradle]
 disabled = true
 
