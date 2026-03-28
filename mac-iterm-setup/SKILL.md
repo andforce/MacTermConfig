@@ -74,13 +74,11 @@ brew install eza
 Add to `~/.zshrc`:
 
 ```zsh
-alias ls="eza --icons --group-directories-first"
-alias ll="eza -lah --icons --group-directories-first --git"
-alias la="eza -a --icons"
-alias tree="eza --tree --icons"
+alias ls="eza --group-directories-first"
+alias ll="eza -lah --group-directories-first --git"
+alias la="eza -a"
+alias tree="eza --tree"
 ```
-
-> 如果图标显示为 `?`，是字体问题 → 见第 3 步安装 Nerd Font。
 
 ---
 
