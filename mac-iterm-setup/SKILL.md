@@ -1,13 +1,13 @@
 ---
 name: mac-iterm-setup
-description: Use when configuring iTerm2 terminal environment on macOS - setting up Starship prompt, eza file listing, Nerd Font, Dracula color theme, zsh autosuggestions, or Vim syntax highlighting. Triggers on requests to beautify terminal, fix prompt display, configure iTerm, or install zsh plugins.
+description: Use when configuring iTerm2 terminal environment on macOS - setting up Starship prompt, eza file listing, Dracula color theme, zsh autosuggestions, or Vim syntax highlighting. Triggers on requests to beautify terminal, fix prompt display, configure iTerm, or install zsh plugins.
 ---
 
 # Mac iTerm2 Terminal Setup
 
 ## Overview
 
-Complete configuration guide for a modern macOS terminal using iTerm2 + zsh. Covers prompt (Starship), file listing (eza), fonts (Nerd Font), color theme (Dracula), shell plugins, and Vim.
+Complete configuration guide for a modern macOS terminal using iTerm2 + zsh. Covers prompt (Starship), file listing (eza), color theme (Dracula), shell plugins, and Vim.
 
 **Prerequisite:** Homebrew must be installed.
 
@@ -82,22 +82,7 @@ alias tree="eza --tree"
 
 ---
 
-## 3. Nerd Font（图标字体）
-
-```bash
-brew install --cask font-jetbrains-mono-nerd-font
-```
-
-安装后在 iTerm2 里切换字体：
-
-**iTerm2 → Settings → Profiles → Text → Font**
-
-选择：`JetBrainsMonoNL Nerd Font Mono`
-（NL = No Ligatures，终端推荐）
-
----
-
-## 4. Dracula 颜色主题
+## 3. Dracula 颜色主题
 
 ```bash
 curl -O https://raw.githubusercontent.com/dracula/iterm/master/Dracula.itermcolors
@@ -109,7 +94,7 @@ curl -O https://raw.githubusercontent.com/dracula/iterm/master/Dracula.itermcolo
 
 ---
 
-## 5. zsh 插件
+## 4. zsh 插件
 
 ### 自动历史补全（灰色提示）
 
@@ -137,7 +122,7 @@ source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 ---
 
-## 6. Vim 配置
+## 5. Vim 配置
 
 `~/.vimrc`:
 
@@ -156,7 +141,7 @@ colorscheme desert
 
 ---
 
-## 7. 大小写不敏感 Tab 补全
+## 6. 大小写不敏感 Tab 补全
 
 默认 zsh 补全区分大小写（`cd CL<Tab>` 无法补全 `Class`）。加一行 `zstyle` 即可启用大小写不敏感匹配：
 
